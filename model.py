@@ -84,7 +84,7 @@ class Model():
         cfg.test_epochs = 1
         cfg.train_epochs = 50
         cfg.optimizer = 'adam'
-        cfg.cuda = True
+        cfg.cuda = False and torch.cuda.is_available()
 
         self.cfg = cfg
         self.log = Logger(cfg)
